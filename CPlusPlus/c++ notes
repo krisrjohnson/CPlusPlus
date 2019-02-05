@@ -13,3 +13,78 @@ Code::Blocks includes IDE and compiler, avail for Windows: http://www.codeblocks
 variables are case sensitive, must be declared before use
 int a,b; // is valid
 a=10;b=20;int sum = a + b; // valid
+
+>> // extractor operator
+cin >> num // user inputs a num
+
+integer division drops remainders
++=, -=, *=, /=, %= (what use case of %=?)
+++x, or x++ // increment by 1, prefix/postfix affects order
+use case:
+x = 5;
+y = x++; // y is 5, x is 6
+z = ++x; // z and x evalute to 7
+
+if(test) {} // if stmt syntax
+while(condition) {}
+for(int x = 1; x < 10; x++) {}
+do {} while(condition); 
+/* if while(false), do block still runs once. So do...while runs at least once */
+
+switch(expression) {
+  case value1:
+	stmts;
+	break;
+  case value2:
+	stmts;
+	break;
+  default: // must appear at the end
+    stmts;
+} /* break can be ommitted if you wish to test all the cases, or certain consecutive cases */
+
+'a' // char
+"a" // string literal
+int // min size is 4 bytes on modern sys architectures
+/* mods: signed, unsigned, short, long -negatives allowed, no negs, half size, double size*/
+float // always signed, three types: float, double, long double // 4, 8, 16 bytes
+#include <string>
+#include <iostream> // contains string
+char // 1-byte int as an ascii
+
+Pascal vs caMel case - BackColor vs backColor
+
+int b[5] = {11, 45, 62, 70, 88}; /* array of 5 int elements initialized as 11, 45, 62, 70, and 88. If the 5 in [5] is ommitted, code will form an array of len equal to elements provided. 0 indexed. Access same as python, cout << b[3] // outputs 70 */
+
+int x[3][4] // integer array of 3 rows x 4 columns, so 12 slots
+similarly can declare using arrays:
+int x[2][3] = {
+	{2,3,4},
+	{8,9,10}
+}
+
+int score = 5;
+cout << &score << endl; // &score is the pointer to the memory address of var score: 0x29fee8
+/* pointers are themselves variables! So &score itself has its own memory location. pointers are of type long hexadecimal. & means address-of	 */
+int *ip; // pointer to an integer
+char *ch; // pointer to a char
+
+int score = 7;
+int *pscore = &score; 
+cout << *pscore << endl; // dereference pscore using asterisk. Outputs 7;
+
+
+Dynamic memory:
+stack - local vars take up mem on stack
+heap - unused prog memory that can be dynamically used when prog runs
+new int; // allocates mem at runtime within the heap, returns mem address
+int *p = new int; *p = 5; /* pointer p is created in the stack as local var, holds allocated heap address, value of 5 is stored in the heap at that address */
+
+/* on stack memory managed automatically. On heap, have to manually handle dynamic mem alloc. Use delete pointer to release the heap mem. This will not delete the pointer variable on the stack. Use a NULL pointer when initializing a pointer as std best practices; int *p = NULL; */
+int *p = NULL;
+p = new int[20]; // request array of memory
+delete [] p; // release the array of memory
+
+cout << sizeof(char) << endl; // returns 1, int: 4, float: 4, double: 8, var: 4 // 
+int numbers[100];
+cout << sizeof(numbers) / sizeof(numbers[0]); /* shows number of elements in an array (in case it wasn't known) */
+
