@@ -88,3 +88,12 @@ cout << sizeof(char) << endl; // returns 1, int: 4, float: 4, double: 8, var: 4 
 int numbers[100];
 cout << sizeof(numbers) / sizeof(numbers[0]); /* shows number of elements in an array (in case it wasn't known) */
 
+/* fns must be declared before being called. So before main(); can declare above and define below (void myFn(); main(){} void myFn(){cout<<"sometin"<<endl;}) is valid */
+/* formal params for fns are similar to local vars, created upon entering and destroyed upon exiting fn */
+
+/* more random, use current seconds as seed */
+#include <cstdlib> // has rand()
+#include <ctime> // has time() fn 
+srand(87) // changes the seed value of rand() to 87
+srand(time(0)) // changes the see of rand() to current seconds
+1 + rand() % 15 // will now gen a rand num 1-15
