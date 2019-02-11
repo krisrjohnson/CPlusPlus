@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "MyClass.h"
 using namespace std;
 
 void printSomething(string); // declare the fn so can be used in main()
@@ -30,6 +31,10 @@ int main()
     myFunc(&x);
     cout << "your new number is: ";
     printSomething(x);
+
+    //class and objects
+    MyClass obj;
+
     return 0;
 }
 void myFunc(int *x) {

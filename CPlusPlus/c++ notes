@@ -122,3 +122,17 @@ int factorial(int n) {
 >> myFunc(&x);
 >> cout >> x >> endl;  // prints 100
 //  Pass by reference when your function needs to modify the argument, or when you need to pass a data type, that uses a lot of memory and is expensive to copy.
+
+// public and private are access specifiers
+// class constructors always have same name as class
+// setters and getters are public methods that access private variables
+// define classes in separate files!
+// in CodeBlocks: File->New->Class
+	// uncheck "has destructor"
+	// check "Header and implementation file shall be in same folder"
+	// upon creation, creates MyClass.h and MyClass.cpp (header and source file)
+// MyClass::MyClass() is the scope resolution for the constructor definition in the header file
+>> include "MyClass.h"  // allows use of MyClass class in main file
+
+// Destructors are fairly opposite of constructors. They can't be overloaded (don't take params)
+// defined with a tilde: ~MyClass() {some code}
