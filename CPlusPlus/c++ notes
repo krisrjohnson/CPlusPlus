@@ -97,3 +97,28 @@ cout << sizeof(numbers) / sizeof(numbers[0]); /* shows number of elements in an 
 srand(87) // changes the seed value of rand() to 87
 srand(time(0)) // changes the see of rand() to current seconds
 1 + rand() % 15 // will now gen a rand num 1-15
+
+
+// overloading - when you have 2 fns w/ the same name, e.g. one that takes a float and one takes an int:
+void printNumber(int a) {cout << a;}
+void printNumber(float a) {cout << a;}
+// cannot overload return type - wah wah waaaaah
+
+
+///// Recursion - functions that call themselves!
+int factorial(int n) {
+	if (n == 1) {return n}
+	else {
+		return n * factorial(n - 1);
+	}
+}
+
+// be default, variables passed to fns are by value, meaning a copy of the value of the var is passed
+// so myFunc(x); does not modify the actual input variable x, rather copies the value and uses whatever that is
+// to modify x globally, myFunc(&x) would be used, passing the memory address of the value of x
+// within the fn definition *x would have to be used, including in declaration
+>> void myFunc(int *x) {*x=100;}  // fn for resetting a variables value to 100 globally
+>> int x = 20;
+>> myFunc(&x);
+>> cout >> x >> endl;  // prints 100
+//  Pass by reference when your function needs to modify the argument, or when you need to pass a data type, that uses a lot of memory and is expensive to copy.
