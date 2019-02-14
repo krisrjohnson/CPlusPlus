@@ -6,5 +6,6 @@ class MyClass
 {
   public:
    MyClass();
+   void myPrint();
 };
 #endif // MYCLASS_H

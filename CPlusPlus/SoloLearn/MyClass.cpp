@@ -2,7 +2,9 @@
 #include <iostream>
 using namespace std;
 
-MyClass::MyClass()
-{
-  cout<<"Constructor"<<endl;
+MyClass::MyClass() {
+}
+
+void MyClass::myPrint() {
+  cout <<"Hello"<<endl;
 }

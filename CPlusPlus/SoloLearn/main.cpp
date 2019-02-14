@@ -12,7 +12,7 @@ int main()
 {
     // single line comment
     /* blockline
-    comment */
+    comment
     cout << "Hello world!" << endl;
     int x,a,b,num; // valid declaration
     int *pnum = &num; // pointer declaration
@@ -31,9 +31,14 @@ int main()
     myFunc(&x);
     cout << "your new number is: ";
     printSomething(x);
+    */
 
     //class and objects
     MyClass obj;
+    MyClass *ptr = &obj; // can create a pointer to an object
+    obj.myPrint(); // outputs "Hello"
+    ptr->myPrint(); // outputs "Hello" as well
+
 
     return 0;
 }

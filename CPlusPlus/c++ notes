@@ -136,3 +136,9 @@ int factorial(int n) {
 
 // Destructors are fairly opposite of constructors. They can't be overloaded (don't take params)
 // defined with a tilde: ~MyClass() {some code}
+
+// can define a ptr to an instantiated object and then use -> to access member fns
+	MyClass obj; // instantiate object obj
+	MyClass *ptr = &obj;  //ptr reference to obj
+	obj.myPrint();  //calls MyClass obj's fn myPrint()
+	ptr->myPrint();  //calls MyClass obj's fn myPrint()

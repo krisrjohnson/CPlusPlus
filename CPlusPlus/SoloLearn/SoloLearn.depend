@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1550165904 source:c:\users\yuji and kris\desktop\gitrepos\sololearn\cplusplus\sololearn\main.cpp
+	<iostream>
+	<string>
+	"MyClass.h"
+
+1550165332 c:\users\yuji and kris\desktop\gitrepos\sololearn\cplusplus\sololearn\myclass.h
+
+1550165341 source:c:\users\yuji and kris\desktop\gitrepos\sololearn\cplusplus\sololearn\myclass.cpp
+	"MyClass.h"
+	<iostream>
+
